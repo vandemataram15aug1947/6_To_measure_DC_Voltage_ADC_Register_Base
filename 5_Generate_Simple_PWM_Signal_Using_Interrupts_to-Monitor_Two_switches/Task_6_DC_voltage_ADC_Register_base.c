@@ -1,6 +1,4 @@
-/*
- * Maaz khan
- * 19jzele0320
+
  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                         To Measure DC Voltage
   */
@@ -24,13 +22,13 @@
 void ConfigADC();
 void initADC_SOC(void);
 
-/////// MAAZ KHAN   ////////////////
+/////// Vande   ////////////////
 uint16_t Adc_Result_1;
 float ADCINA0_1A,Current;
 
 void main(void)
 {
-    /////// MAAZ KHAN   ////////////////
+    /////// Vande   ////////////////
 
     // Initialize all particular clock
     Device_init();
@@ -41,7 +39,7 @@ void main(void)
     // Initialize Pie Vector Table
     Interrupt_initVectorTable();
 
-    /////// MAAZ KHAN   ////////////////
+    /////// Vande   ////////////////
 
     // Calling functions in main
     ConfigADC();
@@ -51,7 +49,7 @@ void main(void)
 
     while (1)
     {
-        /////// MAAZ KHAN   ////////////////
+        /////// Vande   ////////////////
 
         // Convert, wait for completion, and store results
         AdcaRegs.ADCSOCFRC1.bit.SOC0 = 1;
@@ -76,11 +74,11 @@ void main(void)
     }
 }
 
-/////// MAAZ KHAN   ////////////////
+/////// Vande   ////////////////
 
 void ConfigADC()
 {
-    /////// MAAZ KHAN   ////////////////
+    /////// Vande   ////////////////
     EALLOW;
     // Configure ADC clock divider
     AdcaRegs.ADCCTL2.bit.PRESCALE = 6;
@@ -111,7 +109,7 @@ void ConfigADC()
     EDIS;
 }
 
-/////// MAAZ KHAN   ////////////////
+/////// Vande   ////////////////
 
 void initADC_SOC(void)
 {
